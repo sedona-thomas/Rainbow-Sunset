@@ -43,7 +43,13 @@
 
 #### Upload Program to ESP32
 
-- 
+- Plug the device into your computer
+- Open the project folder in your computer's terminal
+- Open `platformio.ini` and change `upload_port =` to the port of your ESP32
+  - Find the port name by going to `PIO Home > Devices` and copy the port name of your ESP32
+- Run `platformio run` in your terminal
+- Run  `platformio run --target upload` in your terminal
+- Unplug the ESP32 from your computer
 
 ### Build Hardware
 
@@ -51,14 +57,13 @@
 
 -
 
-### Make Enclosure
+#### Make Enclosure
 
 -
 
 ### Run Device
 
-- Plug the device into your computer
-- Open _____
+- 
 
 ## More Information
 
