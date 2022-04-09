@@ -47,6 +47,10 @@
 
 ### Build Hardware
 
+#### Make Stained Glass Piece
+
+- 
+
 #### Solder 
 
 -
