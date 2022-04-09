@@ -17,8 +17,13 @@
 #define USE_SERIAL Serial /**< serial communication */
 #define SECOND 1000       /**< miliseconds (1000 miliseconds == 1 second) */
 #define TESTING false     /**< sets testing mode */
+#define BAUD_RATE 115200  /**< baud rate of wifi communication */
 
 void wifiSetup();
 void wifiLoop();
+void processHttpRequest();
+void setupSerial();
+void waiting();
+void running();
 
 #endif
