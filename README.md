@@ -5,7 +5,7 @@
  - ESP32 (CP 2104 Chip)
  - computer
  - USB-C cord
- - glass sheets (a variety of colors)
+ - glass sheets (preferrably cathedral glass)
  - 60% tin/40% lead Stained glass solder
  - Stained glass flux
  - Copper foil
