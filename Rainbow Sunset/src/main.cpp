@@ -1,11 +1,19 @@
+/**
+ * The main.cpp file manages the functionality of the ESP32
+ *
+ * @author Sedona Thomas
+ * @version 1.0.0
+ */
+
 #include <Arduino.h>
+#include "wifi_handler.h"
 
 void setup()
 {
-  // put your setup code here, to run once:
+  wifiSetup();
 }
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
+  wifiLoop();
 }
