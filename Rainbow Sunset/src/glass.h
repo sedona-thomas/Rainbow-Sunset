@@ -4,12 +4,12 @@
 #include <Arduino.h>
 #include <string>
 #include "esp32_screen.h"
-// #include "brush.h"
-// #include "button.h"
-// #include "joystick.h"
-// #include "potentiometer.h"
-// #include "servo.h"
-// #include "step.h"
+// #include "sensors/button.h"
+// #include "sensors/joystick.h"
+// #include "sensors/potentiometer.h"
+// #include "motors/brush.h"
+// #include "motors/servo.h"
+// #include "motors/step.h"
 
 #define SECOND 1000 /**< miliseconds (1000 miliseconds == 1 second) */
 
