@@ -7,13 +7,16 @@
 
 #include <Arduino.h>
 #include "wifi_handler.h"
+#include "no_wifi.h"
 
 void setup()
 {
-  wifiSetup();
+  // wifiSetup();
+  noWifiSetup();
 }
 
 void loop()
 {
-  wifiLoop();
+  // wifiLoop();
+  noWifiLoop();
 }
