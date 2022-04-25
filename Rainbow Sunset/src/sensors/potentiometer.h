@@ -1,22 +1,21 @@
-#ifndef __BUTTON_H__
-#define __BUTTON_H__
+#ifndef __POTENTIOMETER_H__
+#define __POTENTIOMETER_H__
 
-#include "serial_communication.h"
 #include "sensor.h"
 
 /**
  * The Potentiometer class controls the necessary features of a potentiometer
- * 
+ *
  * @author Sedona Thomas
- * @version 1.0.0
+ * @version 3.0.0
  */
-class Potentiometer : public Sensor, public SerialCommunication {
+class Potentiometer : public Sensor
+{
 public:
-  Potentiometer(){};
-  Potentiometer(std::string, int, bool);
-  Potentiometer(int, bool);
+  Potentiometer();
+  Potentiometer(int);
+  Potentiometer(std::string, int);
   void read();
-  void send();
 };
 
 #endif

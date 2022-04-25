@@ -3,17 +3,22 @@
 
 #include <Arduino.h>
 #include <stdint.h>
-#include "ValueQueue.h"
+#include <string>
+#include <format>
 #include "esp32_screen.h"
 
-#define DISPLAY_VALUES true /**< true: sensors; false: rainbow background */
-
-class Sensor {
+class Sensor
+{
 protected:
+  std::string sensor;
+  std::string name;
   uint8_t pin;
   uint8_t value;
-  ValueQueue values;
+  void setupDefault();
+
+public:
   virtual void read() { value = analogRead(pin); };
+  std::string json();
 };
 
 #endif
