@@ -18,13 +18,12 @@ class Neopixel
 {
 public:
     Neopixel();
-    Neopixel(std::string);
+    Neopixel(int);
     void setup();
     void run();
     void runChain();
 
 private:
-    std::string name;
     uint8_t pin;
     int ledCount;
     int delayVal;
