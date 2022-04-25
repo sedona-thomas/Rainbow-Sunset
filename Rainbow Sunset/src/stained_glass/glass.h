@@ -3,8 +3,8 @@
 
 #include <Arduino.h>
 #include <string>
-#include "esp32_screen.h"
-// #include "sensors/photoresistor.h"
+#include "../screen/esp32_screen.h"
+// #include "../sensors/photoresistor.h"
 
 #define SECOND 1000 /**< miliseconds (1000 miliseconds == 1 second) */
 

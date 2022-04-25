@@ -11,8 +11,8 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include "glass.h"
-#include "esp32_screen.h"
+#include "../stained_glass/glass.h"
+#include "../screen/esp32_screen.h"
 
 #define USE_SERIAL Serial /**< serial communication */
 #define SECOND 1000       /**< miliseconds (1000 miliseconds == 1 second) */

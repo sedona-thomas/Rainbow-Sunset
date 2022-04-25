@@ -6,8 +6,8 @@
  */
 
 #include <Arduino.h>
-#include "wifi_handler.h"
-#include "no_wifi.h"
+#include "wifi/wifi_handler.h"
+#include "wifi/no_wifi.h"
 
 void setup()
 {
