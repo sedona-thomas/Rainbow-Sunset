@@ -53,6 +53,8 @@ void Photoresistor::read()
 
 /**
  * The brightness method determines the relative brightness measured by the photoresistor
+ *
+ * @return string describing the relative brightness
  */
 std::string Photoresistor::brightness()
 {
