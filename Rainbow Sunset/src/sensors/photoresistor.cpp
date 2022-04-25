@@ -1,40 +1,87 @@
-#include "humidity.h"
+#include "photoresistor.h"
 
 /**
- * Humidity constructor makes a humidity object
- *
- * @param pin the pin that the humidity sensor is connected to
+ * Photoresistor constructor makes a photoresistor object
  */
-Humidity::Humidity(std::string name_in, int pin)
+Photoresistor::Photoresistor()
 {
-  dht = dht(pin, DHTTYPE);
-  dht.begin();
+  setupDefault();
 }
 
 /**
- * The read method reads humidity sensor values
+ * Photoresistor constructor makes a photoresistor object
+ *
+ * @param pin_in the pin that the photoresistor is connected to
  */
-void Humidity::read()
+Photoresistor::Photoresistor(int pin_in)
 {
-  humidity = dht.readHumidity();
-  temperature = dht.readTemperature(true); /**< Fahrenheit (isFahrenheit = true, default Celcuis) */
-};
+  setupDefault();
+  pin = pin_in;
+}
 
 /**
- * The send method sends data from the humidity over the serial connection
+ * Photoresistor constructor makes a photoresistor object
+ *
+ * @param name_in the photoresistor name
+ * @param pin_in the pin that the photoresistor is connected to
  */
-void Humidity::send()
+Photoresistor::Photoresistor(std::string name_in, int pin_in)
 {
-  read();
-  if (isnan(humidity) || isnan(temperature))
+  setupDefault();
+  name = name_in;
+  pin = pin_in;
+}
+
+/**
+ * The setupDefault method sets up the default sensor state
+ */
+void Photoresistor::setupDefault()
+{
+  sensor = "photoresistor";
+  name = "";
+  pin = 12;
+  value = 0;
+}
+
+/**
+ * The read method reads the photoresistor value
+ */
+void Photoresistor::read()
+{
+  value = analogRead(pin);
+}
+
+/**
+ * The brightness method determines the relative brightness measured by the photoresistor
+ */
+std::string Photoresistor::brightness()
+{
+  if ((0 <= value) && (value < 500))
   {
-    Serial.println(F("Failed to read from DHT sensor!"));
+    return "Dark";
+  }
+  else if (value < 1000)
+  {
+    return "Dim";
+  }
+  else if (value < 1500)
+  {
+    return "Light";
+  }
+  else if (value < 2000)
+  {
+    return "Bright";
+  }
+  else if (value <= 2500)
+  {
+    return "Very bright";
+  }
+  else if (value <= 3000)
+  {
+    return "Extremely bright";
   }
   else
   {
-    Serial.print(F("Humidity: "));
-    Serial.print(humidity);
-    Serial.print(F("%  Temperature: "));
-    Serial.print(temperature);
+    return "Invalid Brightness";
   }
-};
+}

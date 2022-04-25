@@ -7,6 +7,12 @@
 #include <format>
 #include "esp32_screen.h"
 
+/**
+ * The Sensor class controls the necessary features of a single value sensor
+ *
+ * @author Sedona Thomas
+ * @version 4.0.0
+ */
 class Sensor
 {
 protected:

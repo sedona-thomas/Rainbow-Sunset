@@ -7,7 +7,7 @@
  * The Button class controls the necessary features of a button
  *
  * @author Sedona Thomas
- * @version 3.0.0
+ * @version 5.0.0
  */
 class Button : public Sensor
 {

@@ -7,7 +7,7 @@
  * The Potentiometer class controls the necessary features of a potentiometer
  *
  * @author Sedona Thomas
- * @version 3.0.0
+ * @version 5.0.0
  */
 class Potentiometer : public Sensor
 {
