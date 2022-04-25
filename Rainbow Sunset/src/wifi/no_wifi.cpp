@@ -19,7 +19,6 @@ void noWifiSetup()
 void noWifiLoop()
 {
     rainbowBackground();
-    printToScreen("false");
     artwork.run();
     delay(SECOND * 5);
 }
