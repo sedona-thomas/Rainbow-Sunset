@@ -30,7 +30,9 @@ void DhtSensor::read()
 }
 
 /**
- *  The json method returns a json representation of the sensor
+ * The json method returns a json representation of the sensor
+ *
+ * @return json representation of the sensor
  */
 std::string DhtSensor::json()
 {
