@@ -1,7 +1,6 @@
 #ifndef __DHT_SENSOR_H__
 #define __DHT_SENSOR_H__
 
-#include "sensor.h"
 #include "DHT.h"
 
 //#define DHTTYPE DHT11
