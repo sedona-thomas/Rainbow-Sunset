@@ -1,5 +1,5 @@
-#ifndef __BUTTON_H__
-#define __BUTTON_H__
+#ifndef __PHOTORESISTOR_H__
+#define __PHOTORESISTOR_H__
 
 #include "sensor.h"
 
