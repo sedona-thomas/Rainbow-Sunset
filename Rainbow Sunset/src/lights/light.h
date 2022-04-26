@@ -5,9 +5,9 @@
 #include <stdint.h>
 #include <string>
 
-#define CHN 0     /**< define the pwm channel */
-#define FRQ 1000  /**< define the pwm frequency */
-#define PWM_BIT 8 /**< define the pwm precision */
+#define CHN 0     /**< pulse width modulation channel */
+#define FRQ 1000  /**< pulse width modulation frequency */
+#define PWM_BIT 8 /**< pulse width modulation precision */
 
 /**
  * The Light class controls a group of lights

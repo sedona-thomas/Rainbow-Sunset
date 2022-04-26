@@ -23,6 +23,7 @@ Glass::Glass(std::string _name)
  */
 void Glass::setup()
 {
+  
 }
 
 /**

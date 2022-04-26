@@ -10,7 +10,6 @@ BrushMotor::BrushMotor()
   ports[1] = 15;
   ports[2] = 13;
   channel = 0;
-  setup();
 }
 
 /**
@@ -25,7 +24,6 @@ BrushMotor::BrushMotor(std::string _name)
   ports[1] = 15;
   ports[2] = 13;
   channel = 0;
-  setup();
 }
 
 /**
@@ -42,7 +40,6 @@ BrushMotor::BrushMotor(std::string _name, int inPin1, int inPin2, int enablePin)
   ports[0] = inPin1;
   ports[1] = inPin2;
   ports[2] = enablePin;
-  setup();
 }
 
 /**
@@ -61,7 +58,6 @@ BrushMotor::BrushMotor(std::string _name, int inPin1, int inPin2, int enablePin,
   ports[1] = inPin2;
   ports[2] = enablePin;
   channel = _channel;
-  setup();
 }
 
 /**

@@ -14,7 +14,7 @@ Light::Light()
  *
  * @param pin_in the pin that the lights are connected to
  */
-Light::Light(uint8_t pin_in)
+Light::Light(int pin_in)
 {
     pin = pin_in;
     setup();

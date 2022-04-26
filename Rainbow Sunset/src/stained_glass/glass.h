@@ -4,7 +4,9 @@
 #include <Arduino.h>
 #include <string>
 #include "../screen/esp32_screen.h"
-// #include "../sensors/photoresistor.h"
+#include "../sensors/photoresistor.h"
+#include "../lights/neopixel.h"
+#include "../lights/light.h"
 
 #define SECOND 1000 /**< miliseconds (1000 miliseconds == 1 second) */
 
@@ -24,6 +26,7 @@ public:
 
 private:
   std::string name;
+
 };
 
 #endif
