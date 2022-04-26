@@ -5,19 +5,17 @@
  */
 DhtSensor::DhtSensor()
 {
-  dht = dht(12, DHTTYPE);
-  dht.begin();
+  pin = 12;
 }
 
 /**
  * DhtSensor constructor makes a dht object
  *
- * @param pin the pin that the dht sensor is connected to
+ * @param in_pin the pin that the dht sensor is connected to
  */
-DhtSensor::DhtSensor(int pin)
+DhtSensor::DhtSensor(int in_pin)
 {
-  dht = dht(pin, DHTTYPE);
-  dht.begin();
+  pin = in_pin;
 }
 
 /**
@@ -25,6 +23,8 @@ DhtSensor::DhtSensor(int pin)
  */
 void DhtSensor::read()
 {
+  DHT dht = DHT(pin, DHTTYPE);
+  dht.begin();
   humidity = dht.readHumidity();
   temperature = dht.readTemperature(FAHRENHEIT);
 }
@@ -43,6 +43,7 @@ std::string DhtSensor::json()
   }
   else
   {
-    return std::format("\"dht_sensor_pin{}\": {humidity: {}, temperature {}}", pin, humidity, temperature);
+    return "\"dht_sensor_pin" + std::to_string(pin) + "\": {humidity: " + std::to_string(humidity) +
+           ", temperature " + std::to_string(temperature) + "}";
   }
 }

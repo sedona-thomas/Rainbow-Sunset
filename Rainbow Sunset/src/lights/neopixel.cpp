@@ -36,9 +36,10 @@ void Neopixel::setup()
  */
 void Neopixel::run()
 {
+    int m_color[5][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 255}, {0, 0, 0}};
     for (int i = 0; i < ledCount; i++)
     {
-        strip.setLedColorData(i, {255, 255, 255}, {255, 255, 255}, {255, 255, 255});
+        strip.setLedColorData(i, m_color[3][0], m_color[3][1], m_color[3][2]);
         strip.show();
         delay(delayVal);
     }

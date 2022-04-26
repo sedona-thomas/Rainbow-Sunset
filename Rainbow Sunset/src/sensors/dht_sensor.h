@@ -1,12 +1,24 @@
 #ifndef __DHT_SENSOR_H__
 #define __DHT_SENSOR_H__
 
+#include <sstream>
 #include "DHT.h"
 
 //#define DHTTYPE DHT11
 #define DHTTYPE DHT22
 
 #define FAHRENHEIT true
+
+namespace std
+{
+  template <typename T>
+  std::string to_string(const T &n)
+  {
+    std::ostringstream s;
+    s << n;
+    return s.str();
+  }
+}
 
 /**
  * The DhtSensor class controls the necessary features of a humidity sensor
@@ -25,7 +37,6 @@ public:
 
 private:
   uint8_t pin;
-  DHT dht;
   float humidity;
   float temperature;
 };

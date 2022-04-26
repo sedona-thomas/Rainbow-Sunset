@@ -52,6 +52,25 @@ void Photoresistor::read()
 }
 
 /**
+ * The json method returns a json representation of the sensor
+ *
+ * @return json representation of the sensor
+ */
+std::string Photoresistor::json()
+{
+  if (name.length() > 0)
+  {
+    return "\"" + std::to_string(sensor) + "_" + std::to_string(name) +
+           "_pin" + std::to_string(pin) + "\":" + std::to_string(value);
+  }
+  else
+  {
+    return "\"" + std::to_string(sensor) + "_pin" + std::to_string(pin) +
+           "\":" + std::to_string(value);
+  }
+}
+
+/**
  * The brightness method determines the relative brightness measured by the photoresistor
  *
  * @return string describing the relative brightness

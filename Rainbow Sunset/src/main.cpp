@@ -6,17 +6,20 @@
  */
 
 #include <Arduino.h>
-#include "wifi/wifi_handler.h"
-#include "wifi/no_wifi.h"
+
+Glass artwork = Glass(); /**< stained glass artwork */
 
 void setup()
 {
-  // wifiSetup();
-  noWifiSetup();
+  setupScreen();
+  resetScreen();
+  artwork.setup();
+  delay(SECOND * 5);
 }
 
 void loop()
 {
-  // wifiLoop();
-  noWifiLoop();
+  rainbowBackground();
+  artwork.run();
+  delay(SECOND * 5);
 }
