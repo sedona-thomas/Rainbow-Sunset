@@ -6,7 +6,6 @@
 Light::Light()
 {
     pin = 12;
-    setup();
 }
 
 /**
@@ -17,7 +16,6 @@ Light::Light()
 Light::Light(int pin_in)
 {
     pin = pin_in;
-    setup();
 }
 
 /**

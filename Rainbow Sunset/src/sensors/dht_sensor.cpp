@@ -27,6 +27,7 @@ void DhtSensor::read()
   dht.begin();
   humidity = dht.readHumidity();
   temperature = dht.readTemperature(FAHRENHEIT);
+  Serial.println(humidity);
 }
 
 /**
@@ -37,13 +38,14 @@ void DhtSensor::read()
 std::string DhtSensor::json()
 {
   read();
+  int p = pin;
   if (isnan(humidity) || isnan(temperature))
   {
-    return "Failed to read DHT sensor";
+    return "\"dht_sensor_pin" + std::to_string(p) + "\": " + "Failed to read DHT sensor";
   }
   else
   {
-    return "\"dht_sensor_pin" + std::to_string(pin) + "\": {humidity: " + std::to_string(humidity) +
+    return "\"dht_sensor_pin" + std::to_string(p) + "\": {humidity: " + std::to_string(humidity) +
            ", temperature " + std::to_string(temperature) + "}";
   }
 }

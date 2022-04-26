@@ -58,15 +58,16 @@ void Photoresistor::read()
  */
 std::string Photoresistor::json()
 {
+  read();
+  int p = pin;
+  int v = value;
   if (name.length() > 0)
   {
-    return "\"" + std::to_string(sensor) + "_" + std::to_string(name) +
-           "_pin" + std::to_string(pin) + "\":" + std::to_string(value);
+    return "\"" + sensor + "_" + name + "_pin" + std::to_string(p) + "\": " + std::to_string(v);
   }
   else
   {
-    return "\"" + std::to_string(sensor) + "_pin" + std::to_string(pin) +
-           "\":" + std::to_string(value);
+    return "\"" + sensor + "_pin" + std::to_string(p) + "\": " + std::to_string(v);
   }
 }
 

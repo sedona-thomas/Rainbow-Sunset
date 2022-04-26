@@ -9,9 +9,7 @@
 #include "../lights/neopixel.h"
 #include "../lights/light.h"
 
-#define SECOND 1000       /**< miliseconds (1000 miliseconds == 1 second) */
-#define USE_SERIAL Serial /**< serial communication */
-#define BAUD_RATE 115200  /**< baud rate of wifi communication */
+#define SECOND 1000 /**< miliseconds (1000 miliseconds == 1 second) */
 
 /**
  * The Glass class controls the stained glass sunset
@@ -26,10 +24,10 @@ public:
   Glass(std::string);
   void setup();
   void run();
+  std::string jsonValues();
 
 private:
   std::string name;
-  DhtSensor dht;
   Photoresistor photoresistor;
   Neopixel circleLights;
   Light red;
@@ -38,8 +36,6 @@ private:
   Light green;
   Light blue;
   Light purple;
-  void setupSerial();
-  void serialValues();
 };
 
 #endif
