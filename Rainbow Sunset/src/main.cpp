@@ -6,6 +6,8 @@
  */
 
 #include <Arduino.h>
+#include "../stained_glass/glass.h"
+#include "../screen/esp32_screen.h"
 
 Glass artwork = Glass(); /**< stained glass artwork */
 
