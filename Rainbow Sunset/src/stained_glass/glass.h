@@ -5,10 +5,13 @@
 #include <string>
 #include "../screen/esp32_screen.h"
 #include "../sensors/photoresistor.h"
+#include "../sensors/dht_sensor.h"
 #include "../lights/neopixel.h"
 #include "../lights/light.h"
 
-#define SECOND 1000 /**< miliseconds (1000 miliseconds == 1 second) */
+#define SECOND 1000       /**< miliseconds (1000 miliseconds == 1 second) */
+#define USE_SERIAL Serial /**< serial communication */
+#define BAUD_RATE 115200  /**< baud rate of wifi communication */
 
 /**
  * The Glass class controls the stained glass sunset
@@ -26,6 +29,17 @@ public:
 
 private:
   std::string name;
+  DhtSensor dht;
+  Photoresistor photoresistor;
+  Neopixel circleLights;
+  Light red;
+  Light orange;
+  Light yellow;
+  Light green;
+  Light blue;
+  Light purple;
+  void setupSerial();
+  void serialValues();
 };
 
 #endif

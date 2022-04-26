@@ -5,18 +5,7 @@
 #include <stdint.h>
 #include <string>
 #include <sstream>
-#include "sensor.h"
-
-namespace std
-{
-  template <typename T>
-  std::string to_string(const T &n)
-  {
-    std::ostringstream s;
-    s << n;
-    return s.str();
-  }
-}
+#include "../helpers/to_string.h"
 
 /**
  * The Photoresistor class controls the necessary features of a light sensor

@@ -3,22 +3,12 @@
 
 #include <sstream>
 #include "DHT.h"
+#include "../helpers/to_string.h"
 
 //#define DHTTYPE DHT11
 #define DHTTYPE DHT22
 
 #define FAHRENHEIT true
-
-namespace std
-{
-  template <typename T>
-  std::string to_string(const T &n)
-  {
-    std::ostringstream s;
-    s << n;
-    return s.str();
-  }
-}
 
 /**
  * The DhtSensor class controls the necessary features of a humidity sensor
@@ -31,7 +21,6 @@ class DhtSensor
 public:
   DhtSensor();
   DhtSensor(int);
-  DhtSensor(std::string, int);
   void read();
   std::string json();
 
