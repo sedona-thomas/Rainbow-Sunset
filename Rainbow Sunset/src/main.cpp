@@ -33,8 +33,8 @@ void runTests()
   Serial.println("Running Tests:");
   Testing test = Testing();
   test.testDhtSensor();
-  // test.testPhotoresistor();
-  // test.testNeopixel();
+  // test.testPhotoresistor(); // not using, likely fried the circutry
+  test.testNeopixel();
   // test.testLight();
 }
 
@@ -51,5 +51,6 @@ void loop()
   Serial.println("Loop:");
   // runArt();
   runTests();
+  Serial.println("");
   delay(SECOND);
 }
