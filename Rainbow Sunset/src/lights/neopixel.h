@@ -9,7 +9,7 @@
 #define CHANNEL 0    /**< RMT module channel */
 #define LED_COUNT 25 /**< number of leds */
 
-#define PIN 2 /**< Neopixel GPIO pin */
+#define PIN 15 /**< Neopixel GPIO pin */
 
 /**
  * The Neopixel class controls a group of neopixels
