@@ -35,7 +35,9 @@ void Testing::testDhtSensor()
 }
 
 /**
- * The testPsotoresistor method tests the Photoresistor class
+ * The testPhotoresistor method tests the Photoresistor class
+ *
+ * Not using: issue with photoresistor likely having the circuitry fried
  */
 void Testing::testPhotoresistor()
 {
