@@ -7,7 +7,7 @@
 #include "Freenove_WS2812_Lib_for_ESP32.h"
 
 #define CHANNEL 0    /**< RMT module channel */
-#define LED_COUNT 24 /**< number of leds */
+#define LED_COUNT 25 /**< number of leds */
 
 #define PIN 2 /**< Neopixel GPIO pin */
 
