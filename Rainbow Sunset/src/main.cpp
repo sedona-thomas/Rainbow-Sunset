@@ -31,8 +31,8 @@ void runTests()
 {
   Serial.println("Running Tests:");
   Testing test = Testing();
-  // test.testDhtSensor();
-  // test.testNeopixel();
+  test.testDhtSensor();
+  test.testNeopixel();
   test.testLight();
 
   // test.testPhotoresistor(); // not using, likely fried the circutry
