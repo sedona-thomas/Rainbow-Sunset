@@ -72,33 +72,33 @@ std::string Photoresistor::json()
 }
 
 /**
- * The brightness method determines the relative brightness measured by the photoresistor
+ * The brightness method determines the relative brightness measured by the photoresistor with an input of 3.7 V
  *
  * @return string describing the relative brightness
  */
 std::string Photoresistor::brightness()
 {
-  if ((0 <= value) && (value < 500))
+  if ((0 <= value) && (value < 50))
   {
     return "Dark";
   }
-  else if (value < 1000)
+  else if (value < 70)
   {
     return "Dim";
   }
-  else if (value < 1500)
+  else if (value < 110)
   {
     return "Light";
   }
-  else if (value < 2000)
+  else if (value < 140)
   {
     return "Bright";
   }
-  else if (value <= 2500)
+  else if (value <= 180)
   {
     return "Very bright";
   }
-  else if (value <= 3000)
+  else if (value <= 220)
   {
     return "Extremely bright";
   }
