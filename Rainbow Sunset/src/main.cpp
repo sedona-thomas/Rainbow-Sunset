@@ -33,8 +33,8 @@ void runTests()
   Testing test = Testing();
   test.testDhtSensor();
   test.testNeopixel();
-  test.testLight();
 
+  // test.testLight(); // too much for the ESP32 to handle, endless restart
   // test.testPhotoresistor(); // not using, likely fried the circutry
 }
 
