@@ -6,9 +6,10 @@
 void Testing::testAll()
 {
     testDhtSensor();
-    testPhotoresistor();
     testNeopixel();
-    testLight();
+
+    // testPhotoresistor();
+    // testLight();
 }
 
 /**
@@ -35,6 +36,19 @@ void Testing::testDhtSensor()
 }
 
 /**
+ * The testNeopixel method tests the Neopixel class
+ */
+void Testing::testNeopixel()
+{
+    Neopixel circle = Neopixel();
+    delay(SECOND);
+    circle.setup();
+    delay(SECOND);
+    circle.runChain();
+    delay(SECOND);
+}
+
+/**
  * The testPhotoresistor method tests the Photoresistor class
  *
  * Not using: issue with photoresistor likely having the circuitry fried
@@ -55,19 +69,6 @@ void Testing::testPhotoresistor()
 
     Serial.println(photoresistor.json().c_str());
 
-    delay(SECOND);
-}
-
-/**
- * The testNeopixel method tests the Neopixel class
- */
-void Testing::testNeopixel()
-{
-    Neopixel circle = Neopixel();
-    delay(SECOND);
-    circle.setup();
-    delay(SECOND);
-    circle.runChain();
     delay(SECOND);
 }
 
