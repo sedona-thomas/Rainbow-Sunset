@@ -6,7 +6,8 @@
 #include <string>
 #include "Freenove_WS2812_Lib_for_ESP32.h"
 
-#define CHANNEL 0 /**< RMT module channel */
+#define CHANNEL 0    /**< RMT module channel */
+#define LED_COUNT 24 /**< number of leds */
 
 /**
  * The Neopixel class controls a group of neopixels
@@ -25,7 +26,6 @@ public:
 
 private:
     uint8_t pin;
-    int ledCount;
     int delayVal;
     Freenove_ESP32_WS2812 strip;
 };

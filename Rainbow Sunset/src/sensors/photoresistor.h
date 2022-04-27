@@ -22,6 +22,7 @@ public:
   void read();
   std::string json();
   std::string brightness();
+  uint8_t getValue();
 
 private:
   std::string sensor;

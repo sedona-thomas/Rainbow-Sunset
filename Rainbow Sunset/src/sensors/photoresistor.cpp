@@ -107,3 +107,11 @@ std::string Photoresistor::brightness()
     return "Invalid Brightness";
   }
 }
+
+/**
+ * The getValue method returns the photoresistor value
+ */
+uint8_t Photoresistor::getValue()
+{
+  return value;
+}

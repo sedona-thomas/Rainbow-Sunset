@@ -26,7 +26,7 @@ Neopixel::Neopixel(int pin_in)
 void Neopixel::setup()
 {
     delayVal = 100;
-    strip = Freenove_ESP32_WS2812(ledCount, pin, CHANNEL, TYPE_GRB);
+    strip = Freenove_ESP32_WS2812(LED_COUNT, pin, CHANNEL, TYPE_GRB);
     strip.begin();
     strip.setBrightness(10);
 }
@@ -37,7 +37,7 @@ void Neopixel::setup()
 void Neopixel::run()
 {
     int m_color[5][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 255}, {0, 0, 0}};
-    for (int i = 0; i < ledCount; i++)
+    for (int i = 0; i < LED_COUNT; i++)
     {
         strip.setLedColorData(i, m_color[3][0], m_color[3][1], m_color[3][2]);
         strip.show();
@@ -53,7 +53,7 @@ void Neopixel::runChain()
     int m_color[5][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 255}, {0, 0, 0}};
     for (int j = 0; j < 5; j++)
     {
-        for (int i = 0; i < ledCount; i++)
+        for (int i = 0; i < LED_COUNT; i++)
         {
             strip.setLedColorData(i, m_color[j][0], m_color[j][1], m_color[j][2]);
             strip.show();

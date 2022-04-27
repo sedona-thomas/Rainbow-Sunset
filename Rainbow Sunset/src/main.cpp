@@ -9,29 +9,39 @@
 #include <string>
 #include "stained_glass/glass.h"
 #include "lights/light.h"
+#include "testing.h"
 
-#define USE_SERIAL Serial /**< serial communication */
-#define BAUD_RATE 115200  /**< baud rate of wifi communication */
+#define BAUD_RATE 115200 /**< baud rate of wifi communication */
 
-Glass artwork = Glass(); /**< stained glass artwork */
+// Glass artwork = Glass(); /**< stained glass artwork */
 
-Light red = Light(36);
+void setupSerial()
+{
+  Serial.begin(BAUD_RATE);
+}
+
+// void runArt()
+// {
+//   artwork.run();
+//   std::string json = artwork.jsonValues();
+//   Serial.println(json.c_str());
+// }
+
+void runTests()
+{
+  Testing test = Testing();
+}
 
 void setup()
 {
-  USE_SERIAL.begin(115200);
-  USE_SERIAL.println("Setup:");
-  artwork.setup();
-  delay(SECOND * 5);
+  setupSerial();
+  // artwork.setup();
+  delay(SECOND);
 }
 
 void loop()
 {
-  USE_SERIAL.println("Loop:");
-
-  artwork.run();
-  std::string json = artwork.jsonValues();
-  USE_SERIAL.println(json.c_str());
-
-  delay(SECOND * 5);
+  // runArt();
+  runTests();
+  delay(SECOND);
 }

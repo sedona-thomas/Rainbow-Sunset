@@ -49,3 +49,23 @@ std::string DhtSensor::json()
            ", temperature " + std::to_string(temperature) + "}";
   }
 }
+
+/**
+ * The getHumidity method returns the current humidity
+ *
+ * @return Current humidity
+ */
+float DhtSensor::getHumidity()
+{
+  return humidity;
+}
+
+/**
+ * The getTemperature method returns the current temperature
+ *
+ * @return Current temperature
+ */
+float DhtSensor::getTemperature()
+{
+  return temperature;
+}

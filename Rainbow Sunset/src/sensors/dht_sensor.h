@@ -23,6 +23,8 @@ public:
   DhtSensor(int);
   void read();
   std::string json();
+  float getHumidity();
+  float getTemperature();
 
 private:
   uint8_t pin;
