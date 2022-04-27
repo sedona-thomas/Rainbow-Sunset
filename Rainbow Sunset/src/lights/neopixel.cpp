@@ -1,32 +1,12 @@
 #include "neopixel.h"
 
-/**
- * Neopixel constructor makes a button object
- */
-Neopixel::Neopixel()
-{
-    pin = 12;
-    setup();
-}
-
-/**
- * Neopixel constructor makes a button object
- *
- * @param pin_in the pin that the button is connected to
- */
-Neopixel::Neopixel(int pin_in)
-{
-    pin = pin_in;
-    setup();
-}
+Freenove_ESP32_WS2812 strip = Freenove_ESP32_WS2812(LED_COUNT, PIN, CHANNEL, TYPE_GRB);
 
 /**
  * The setup method sets up the neopixel state
  */
 void Neopixel::setup()
 {
-    delayVal = 100;
-    strip = Freenove_ESP32_WS2812(LED_COUNT, pin, CHANNEL, TYPE_GRB);
     strip.begin();
     strip.setBrightness(10);
 }
@@ -41,7 +21,7 @@ void Neopixel::run()
     {
         strip.setLedColorData(i, m_color[3][0], m_color[3][1], m_color[3][2]);
         strip.show();
-        delay(delayVal);
+        delay(100);
     }
 }
 
@@ -57,7 +37,7 @@ void Neopixel::runChain()
         {
             strip.setLedColorData(i, m_color[j][0], m_color[j][1], m_color[j][2]);
             strip.show();
-            delay(delayVal);
+            delay(100);
         }
         delay(500);
     }

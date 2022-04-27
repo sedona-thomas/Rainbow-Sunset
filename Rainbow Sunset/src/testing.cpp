@@ -61,7 +61,7 @@ void Testing::testPhotoresistor()
  */
 void Testing::testNeopixel()
 {
-    Neopixel circle = Neopixel(15);
+    Neopixel circle = Neopixel();
     delay(SECOND);
     circle.setup();
     delay(SECOND);

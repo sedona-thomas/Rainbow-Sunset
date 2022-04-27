@@ -8,7 +8,6 @@
 #include <Arduino.h>
 #include <string>
 #include "stained_glass/glass.h"
-#include "lights/light.h"
 #include "testing.h"
 
 #define BAUD_RATE 115200 /**< baud rate of wifi communication */

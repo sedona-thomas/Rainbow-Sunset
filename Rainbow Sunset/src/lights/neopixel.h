@@ -9,6 +9,8 @@
 #define CHANNEL 0    /**< RMT module channel */
 #define LED_COUNT 24 /**< number of leds */
 
+#define PIN 2 /**< Neopixel GPIO pin */
+
 /**
  * The Neopixel class controls a group of neopixels
  *
@@ -18,16 +20,10 @@
 class Neopixel
 {
 public:
-    Neopixel();
-    Neopixel(int);
+    Neopixel(){};
     void setup();
     void run();
     void runChain();
-
-private:
-    uint8_t pin;
-    int delayVal;
-    Freenove_ESP32_WS2812 strip;
 };
 
 #endif
