@@ -18,6 +18,7 @@
 void setupSerial()
 {
   Serial.begin(BAUD_RATE);
+  Serial.println("Setup Serial");
 }
 
 // void runArt()
@@ -29,11 +30,17 @@ void setupSerial()
 
 void runTests()
 {
+  Serial.println("Running Tests:");
   Testing test = Testing();
+  test.testDhtSensor();
+  // test.testPhotoresistor();
+  // test.testNeopixel();
+  // test.testLight();
 }
 
 void setup()
 {
+  Serial.println("Setup:");
   setupSerial();
   // artwork.setup();
   delay(SECOND);
@@ -41,6 +48,7 @@ void setup()
 
 void loop()
 {
+  Serial.println("Loop:");
   // runArt();
   runTests();
   delay(SECOND);

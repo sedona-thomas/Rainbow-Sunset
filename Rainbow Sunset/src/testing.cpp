@@ -17,6 +17,9 @@ void Testing::testAll()
 void Testing::testDhtSensor()
 {
     DhtSensor dht = DhtSensor(12);
+
+    delay(SECOND);
+
     dht.read();
 
     Serial.print("Humidity: ");
@@ -27,6 +30,8 @@ void Testing::testDhtSensor()
     Serial.println(dht.getTemperature());
 
     Serial.println(dht.json().c_str());
+
+    delay(SECOND);
 }
 
 /**
@@ -35,6 +40,9 @@ void Testing::testDhtSensor()
 void Testing::testPhotoresistor()
 {
     Photoresistor photoresistor = Photoresistor(13);
+
+    delay(SECOND);
+
     photoresistor.read();
 
     Serial.print("Value: ");
@@ -44,6 +52,8 @@ void Testing::testPhotoresistor()
     Serial.println(photoresistor.brightness().c_str());
 
     Serial.println(photoresistor.json().c_str());
+
+    delay(SECOND);
 }
 
 /**
@@ -52,8 +62,11 @@ void Testing::testPhotoresistor()
 void Testing::testNeopixel()
 {
     Neopixel circle = Neopixel(15);
+    delay(SECOND);
     circle.setup();
+    delay(SECOND);
     circle.runChain();
+    delay(SECOND);
 }
 
 /**
@@ -62,6 +75,9 @@ void Testing::testNeopixel()
 void Testing::testLight()
 {
     Light light = Light(2);
+    delay(SECOND);
     light.setup();
+    delay(SECOND);
     light.runLoop();
+    delay(SECOND);
 }
