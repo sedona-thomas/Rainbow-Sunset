@@ -36,14 +36,13 @@ void DhtSensor::read()
  */
 std::string DhtSensor::json()
 {
-  int p = pin;
   if (isnan(humidity) || isnan(temperature))
   {
-    return "\"dht_sensor_pin" + std::to_string(p) + "\": " + "Failed to read DHT sensor";
+    return "\"dht_sensor_pin" + std::to_string(pin) + "\": " + "Failed to read DHT sensor";
   }
   else
   {
-    return "\"dht_sensor_pin" + std::to_string(p) + "\": {humidity: " + std::to_string(humidity) +
+    return "\"dht_sensor_pin" + std::to_string(pin) + "\": {humidity: " + std::to_string(humidity) +
            ", temperature " + std::to_string(temperature) + "}";
   }
 }
