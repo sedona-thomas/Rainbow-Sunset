@@ -32,7 +32,7 @@ void runTests()
   Serial.println("Running Tests:");
   Testing test = Testing();
   test.testDhtSensor();
-  test.testNeopixel();
+  // test.testNeopixel();
 
   // test.testLight(); // too much for the ESP32 to handle, endless restart
   // test.testPhotoresistor(); // not using, likely fried the circutry
