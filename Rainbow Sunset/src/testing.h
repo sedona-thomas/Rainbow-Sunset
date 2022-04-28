@@ -13,7 +13,7 @@
  * The Testing class controls the stained glass sunset
  *
  * @author Sedona Thomas
- * @version 1.0.0
+ * @version 3.0.0
  */
 class Testing
 {
