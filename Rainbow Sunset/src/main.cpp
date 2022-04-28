@@ -2,7 +2,7 @@
  * The main.cpp file manages the functionality of the ESP32
  *
  * @author Sedona Thomas
- * @version 1.0.0
+ * @version 2.0.0
  */
 
 #include <Arduino.h>
