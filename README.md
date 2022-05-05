@@ -73,6 +73,12 @@
 - Solder together lights behind the same color of glass
 - Hot glue each wire along the back side of the solder to hide the wires
 
+#### Connect Neopixel Ring
+
+- Attach the D1 pin of the neopoxel light ring to pin 13 of the ESP32
+- Connect the 5V pin to an external battery positive terminal
+- Connect the ground pin to an external battery ground (-) terminal
+
 #### Connect Sensors
 
 - 
