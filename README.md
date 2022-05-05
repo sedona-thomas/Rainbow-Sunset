@@ -50,7 +50,9 @@
 
 ### Build Hardware
 
-#### Make Stained Glass Piece
+#### Make Enclosure
+
+##### Make Stained Glass Piece
 
 - Draw the pattern on a piece of paper
 - Put your glass pieces over the paper and trace the pattern onto each corresponding color of glass
@@ -64,13 +66,16 @@
 - Use the copper foil burnisher to smooth down the edges of the copper foil
 - Apply flux to the copper foil and solder the pieces together
 
-#### Solder the Lights
+##### Solder the Lights
+
+- Solder the ground (-) end of each light to the desired position on the back of the stained glass piece
+- Solder the positive end of each light to a wire
+- Solder together lights behind the same color of glass
+- Hot glue each wire along the back side of the solder to hide the wires
+
+#### Connect Sensors
 
 - 
-
-#### Make Enclosure
-
--
 
 ### Run Device
 
