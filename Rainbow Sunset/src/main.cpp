@@ -7,7 +7,7 @@
 
 #include <Arduino.h>
 #include <string>
-#include "stained_glass/glass.h"
+//#include "stained_glass/glass.h"
 #include "testing.h"
 
 #define BAUD_RATE 115200 /**< baud rate of wifi communication */
@@ -31,10 +31,10 @@ void runTests()
 {
   Serial.println("Running Tests:");
   Testing test = Testing();
-  test.testDhtSensor();
-  test.testNeopixel();
+  // test.testDhtSensor();
+  // test.testNeopixel();
 
-  // test.testLight(); // too much for the ESP32 to handle, endless restart
+  test.testLight(); // too much for the ESP32 to handle, endless restart
   // test.testPhotoresistor(); // not using, likely fried the circutry
 }
 

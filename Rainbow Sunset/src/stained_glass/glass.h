@@ -3,7 +3,6 @@
 
 #include <Arduino.h>
 #include <string>
-#include "../screen/esp32_screen.h"
 #include "../sensors/photoresistor.h"
 #include "../sensors/dht_sensor.h"
 #include "../lights/neopixel.h"
