@@ -78,29 +78,29 @@ std::string Photoresistor::json()
  */
 std::string Photoresistor::brightness()
 {
-  if (value <= 220)
+  if ((0 <= value) && (value < 50))
   {
-    return "Dark";
-  }
-  else if (value <= 180)
-  {
-    return "Dim";
-  }
-  else if (value < 140)
-  {
-    return "Light";
-  }
-  else if (value < 110)
-  {
-    return "Bright";
+    return "Extremely bright";
   }
   else if (value < 70)
   {
     return "Very bright";
   }
-  else if ((0 <= value) && (value < 50))
+  else if (value < 110)
   {
-    return "Extremely bright";
+    return "Bright";
+  }
+  else if (value < 140)
+  {
+    return "Light";
+  }
+  else if (value <= 180)
+  {
+    return "Dim";
+  }
+  else if (value <= 220)
+  {
+    return "Dark";
   }
   else
   {

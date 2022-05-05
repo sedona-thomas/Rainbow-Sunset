@@ -77,16 +77,47 @@ void Testing::testPhotoresistor()
  */
 void Testing::testLight()
 {
-    Light light = Light(2);
+    Light light = Light(36);
     delay(SECOND);
     light.setup();
     delay(SECOND);
     light.runLoop();
     delay(SECOND);
-    Light light2 = Light(17);
-    delay(SECOND);
-    light2.setup();
-    delay(SECOND);
-    light2.runLoop();
-    delay(SECOND);
+
+    // Light light = Light(36);
+    // delay(SECOND);
+    // light.setup();
+    // delay(SECOND);
+    // light.runLoop();
+    // delay(SECOND);
+    // Light light2 = Light(37);
+    // delay(SECOND);
+    // light2.setup();
+    // delay(SECOND);
+    // light2.runLoop();
+    // delay(SECOND);
+    // Light light3 = Light(38);
+    // delay(SECOND);
+    // light3.setup();
+    // delay(SECOND);
+    // light3.runLoop();
+    // delay(SECOND);
+    // Light light4 = Light(39);
+    // delay(SECOND);
+    // light4.setup();
+    // delay(SECOND);
+    // light4.runLoop();
+    // delay(SECOND);
+    // Light light5 = Light(32);
+    // delay(SECOND);
+    // light5.setup();
+    // delay(SECOND);
+    // light5.runLoop();
+    // delay(SECOND);
+    // Light light6 = Light(33);
+    // delay(SECOND);
+    // light6.setup();
+    // delay(SECOND);
+    // light6.runLoop();
+    // delay(SECOND);
 }

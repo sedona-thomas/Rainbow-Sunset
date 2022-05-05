@@ -25,6 +25,8 @@ void Light::setup()
 {
     ledcSetup(CHN, FRQ, PWM_BIT);
     ledcAttachPin(pin, CHN);
+    ledcWrite(CHN, 255);
+    delay(10);
 }
 
 /**

@@ -23,15 +23,18 @@ Glass::Glass(std::string _name)
  */
 void Glass::setup()
 {
-  photoresistor = Photoresistor(13);
+  photoresistor = Photoresistor(15);
+
   // circleLights = Neopixel();
+
   red = Light(36);
-  red.setup();
   // orange = Light(37);
   // yellow = Light(38);
   // green = Light(39);
   // blue = Light(32);
   // purple = Light(33);
+
+  red.setup();
 }
 
 /**
@@ -40,7 +43,13 @@ void Glass::setup()
 void Glass::run()
 {
   // circleLights.run();
-  red.run();
+
+  photoresistor.read();
+  Serial.print("Value: ");
+  Serial.println(photoresistor.getValue());
+
+  int i = photoresistor.getValue();
+  red.set(i);
 }
 
 /**
