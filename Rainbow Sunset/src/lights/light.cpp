@@ -67,3 +67,12 @@ void Light::fadeOut()
         delay(10);
     }
 }
+
+/**
+ * The set method sets the light value
+ */
+void Light::set(int i)
+{
+    ledcWrite(CHN, i);
+    delay(10);
+}

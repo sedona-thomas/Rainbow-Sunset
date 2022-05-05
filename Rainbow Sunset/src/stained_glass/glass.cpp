@@ -24,7 +24,7 @@ Glass::Glass(std::string _name)
 void Glass::setup()
 {
   photoresistor = Photoresistor(13);
-  // circleLights = Neopixel(15);
+  // circleLights = Neopixel();
   red = Light(36);
   red.setup();
   // orange = Light(37);

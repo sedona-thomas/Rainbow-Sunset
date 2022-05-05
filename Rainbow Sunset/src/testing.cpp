@@ -55,7 +55,7 @@ void Testing::testNeopixel()
  */
 void Testing::testPhotoresistor()
 {
-    Photoresistor photoresistor = Photoresistor(13);
+    Photoresistor photoresistor = Photoresistor(15);
 
     delay(SECOND);
 
@@ -82,5 +82,11 @@ void Testing::testLight()
     light.setup();
     delay(SECOND);
     light.runLoop();
+    delay(SECOND);
+    Light light2 = Light(17);
+    delay(SECOND);
+    light2.setup();
+    delay(SECOND);
+    light2.runLoop();
     delay(SECOND);
 }

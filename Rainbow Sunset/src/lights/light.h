@@ -23,11 +23,12 @@ public:
     void setup();
     void run();
     void runLoop();
+    void fadeIn();
+    void fadeOut();
+    void set(int);
 
 private:
     uint8_t pin;
-    void fadeIn();
-    void fadeOut();
 };
 
 #endif

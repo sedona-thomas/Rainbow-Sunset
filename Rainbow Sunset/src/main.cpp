@@ -34,8 +34,8 @@ void runTests()
   // test.testDhtSensor();
   // test.testNeopixel();
 
-  test.testLight(); // too much for the ESP32 to handle, endless restart
-  // test.testPhotoresistor(); // not using, likely fried the circutry
+  // test.testLight(); // too much for the ESP32 to handle, endless restart
+  test.testPhotoresistor(); // not using, likely fried the circutry
 }
 
 void setup()
