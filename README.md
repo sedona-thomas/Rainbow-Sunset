@@ -54,7 +54,7 @@
 
 ##### Make Stained Glass Piece
 
-- Draw the pattern on a piece of paper
+- Draw the pattern on a piece of paper or cut out of vinyl stickers
 - Put your glass pieces over the paper and trace the pattern onto each corresponding color of glass
   - Trace each outline so the least amount of glass is broken for each straight cut
 - Use a glass cutter to score straight lines across the glass and break with running pliers
