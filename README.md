@@ -1,6 +1,6 @@
 # Rainbow-Sunset
 
-![Rainbow Sunset Stained Glass](Images/IMG_6861.heic?raw=true "Rainbow Sunset")
+![Rainbow Sunset Stained Glass](Images/IMG_0155.png?raw=true "Rainbow Sunset")
 
 ## Materials
 
