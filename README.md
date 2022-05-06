@@ -97,9 +97,11 @@
 - Connect the third pin to GPIO pin 12
 - Connect the fourth pin to a ground pin of the ESP32
 
-##### Connect the Photoresistor
+##### Connect the 4 Prong Photoresistor
 
-- 
+- Connect the Vcc prong to the 5V pin of the ESP32
+- Connect tge GND pin to a ground pin of the ESP32
+- Connect the A0 (analog) pin to GPIO pin 15
 
 ### Run Device
 
