@@ -89,9 +89,9 @@
 
 ## More Information
 
-Medium Blog Post: []()
+Medium Blog Post: [https://sedonathomas.medium.com/rainbow-sunset-edff6b4f1702](https://sedonathomas.medium.com/rainbow-sunset-edff6b4f1702)
 
-Youtube Demo: []()
+Youtube Demo: [https://youtu.be/Bv8L7zAvgYc](https://youtu.be/Bv8L7zAvgYc)
 
 ##
 ## Special Thanks to Professor Mark Santolucito, the staff at the Barnard Design Center, and the staff at the Columbia Makerspace for all of their help and supplies!!!
