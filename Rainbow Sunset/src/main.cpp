@@ -8,23 +8,16 @@
 #include <Arduino.h>
 #include <string>
 #include "testing.h"
+#include "runner.h"
 
 #define BAUD_RATE 115200 /**< baud rate of wifi communication */
+
+Runner runner = Runner();
 
 void setupSerial()
 {
   Serial.begin(BAUD_RATE);
   Serial.println("Setup Serial");
-}
-
-void runTests()
-{
-  Serial.println("Running Tests:");
-  Testing test = Testing();
-  // test.testDhtSensor();
-  // test.testNeopixel();
-  test.testLight(); // too much for the ESP32 to handle, endless restart with others
-  // test.testPhotoresistor(); // not using, likely fried the circutry
 }
 
 void setup()
@@ -37,7 +30,19 @@ void setup()
 void loop()
 {
   Serial.println("Loop:");
-  runTests();
+
+  runner.runAll();
+
   Serial.println("");
   delay(SECOND);
 }
+
+// void runTests()
+// {
+//   Serial.println("Running Tests:");
+//   Testing test = Testing();
+//   // test.testDhtSensor();
+//   test.testNeopixel();
+//   test.testLight(); // too much for the ESP32 to handle, endless restart with others
+//   // test.testPhotoresistor(); // not using, likely fried the circutry
+// }

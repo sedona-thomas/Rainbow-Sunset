@@ -25,7 +25,7 @@ void Light::setup()
 {
     ledcSetup(CHN, FRQ, PWM_BIT);
     ledcAttachPin(pin, CHN);
-    ledcWrite(CHN, 255);
+    ledcWrite(CHN, 0);
     delay(10);
 }
 
@@ -38,7 +38,7 @@ void Light::run()
 }
 
 /**
- * The runChain method lights up each pixel in a row and keeps them on
+ * The runLoop method lights up each pixel in a row and keeps them on
  */
 void Light::runLoop()
 {
@@ -77,4 +77,37 @@ void Light::set(int i)
 {
     ledcWrite(CHN, i);
     delay(10);
+}
+
+/**
+ * The runLoopMax method lights up each pixel in a row and keeps them on with a max brightness
+ */
+void Light::runLoopMax(int max)
+{
+    fadeInMax(max);
+    fadeOutMax(max);
+}
+
+/**
+ * The fadeInMax method fades in the light with a max brightness
+ */
+void Light::fadeInMax(int max)
+{
+    for (int i = 0; i < max; i++)
+    {
+        ledcWrite(CHN, i);
+        delay(10);
+    }
+}
+
+/**
+ * The fadeInMax method fades out the light with a max brightness
+ */
+void Light::fadeOutMax(int max)
+{
+    for (int i = max; i > -1; i--)
+    {
+        ledcWrite(CHN, i);
+        delay(10);
+    }
 }

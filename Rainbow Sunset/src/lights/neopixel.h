@@ -24,6 +24,7 @@ public:
     void setup();
     void run();
     void runChain();
+    void runLoopSpeed(float, float);
 };
 
 #endif

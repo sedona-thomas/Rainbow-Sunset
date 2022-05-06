@@ -42,3 +42,19 @@ void Neopixel::runChain()
         delay(500);
     }
 }
+
+/**
+ * The runLoopSpeed method lights up each pixel in a row with given temperature and humidity
+ */
+void Neopixel::runLoopSpeed(float humidity, float temp)
+{
+    int m_color[5][3] = {{255, 0, 0}, {0, 255, 0}, {0, 0, 255}, {255, 255, 255}, {0, 0, 0}};
+    int color = static_cast<int>(temp / 1) % 5;
+    for (int i = 0; i < LED_COUNT; i++)
+    {
+        strip.setLedColorData(i, m_color[color][0], m_color[color][1], m_color[color][2]);
+        strip.show();
+        delay(humidity * 10);
+    }
+    delay(500);
+}

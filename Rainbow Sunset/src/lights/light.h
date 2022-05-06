@@ -26,6 +26,9 @@ public:
     void fadeIn();
     void fadeOut();
     void set(int);
+    void runLoopMax(int);
+    void fadeInMax(int);
+    void fadeOutMax(int);
 
 private:
     uint8_t pin;

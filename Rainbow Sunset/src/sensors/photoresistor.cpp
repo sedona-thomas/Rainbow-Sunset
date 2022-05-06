@@ -104,7 +104,7 @@ std::string Photoresistor::brightness()
   }
   else
   {
-    return "Invalid Brightness";
+    return "Extremely Dark";
   }
 }
 

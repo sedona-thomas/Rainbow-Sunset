@@ -1,128 +1,100 @@
-#include "testing.h"
+#include "runner.h"
 
 /**
- * The testAll method tests all classes
+ * The runAll method runs all classes
  */
-void Testing::testAll()
+void Runner::runAll()
 {
-    testDhtSensor();
-    testNeopixel();
-
-    // testPhotoresistor();
-    // testLight();
+    runNeopixel();
+    runLight();
 }
 
 /**
- * The testDhtSensor method tests the DhtSensor class
+ * The runNeopixel method runs the Neopixel class
  */
-void Testing::testDhtSensor()
+void Runner::runNeopixel()
 {
     DhtSensor dht = DhtSensor(12);
-
     delay(SECOND);
-
     dht.read();
-
     Serial.print("Humidity: ");
     Serial.print(dht.getHumidity());
     Serial.println("%");
-
     Serial.print("Temperature: ");
     Serial.println(dht.getTemperature());
-
-    Serial.println(dht.json().c_str());
-
     delay(SECOND);
-}
 
-/**
- * The testNeopixel method tests the Neopixel class
- */
-void Testing::testNeopixel()
-{
-    Neopixel circle = Neopixel();
+    Neopixel circle = Neopixel(); /**< GPIO pin 13 */
     delay(SECOND);
     circle.setup();
     delay(SECOND);
-    circle.runChain();
+    circle.runLoopSpeed(dht.getHumidity(), dht.getTemperature());
     delay(SECOND);
 }
 
 /**
- * The testPhotoresistor method tests the Photoresistor class
- *
- * Not using: issue with photoresistor likely having the circuitry fried
+ * The runLight method runs the Light class
  */
-void Testing::testPhotoresistor()
+void Runner::runLight()
 {
     Photoresistor photoresistor = Photoresistor(15);
-
     delay(SECOND);
-
     photoresistor.read();
-
-    Serial.print("Value: ");
-    Serial.println(photoresistor.getValue());
-
-    Serial.print("Brightness: ");
+    Serial.print("Photoresistor: ");
+    Serial.print(photoresistor.getValue());
+    Serial.print(" ");
     Serial.println(photoresistor.brightness().c_str());
 
-    Serial.println(photoresistor.json().c_str());
+    int max = 0 < photoresistor.getValue() && photoresistor.getValue() < 255 ? 255 - photoresistor.getValue() : 1;
+    Serial.print("Max: ");
+    Serial.println(max);
 
-    delay(SECOND);
-}
-
-/**
- * The testLight method tests the Light class
- */
-void Testing::testLight()
-{
     Light red = Light(21);
     delay(SECOND);
     red.setup();
     delay(SECOND);
-    red.runLoop();
+    red.runLoopMax(max);
     delay(SECOND);
 
     Light orange = Light(22);
     delay(SECOND);
     orange.setup();
     delay(SECOND);
-    orange.runLoop();
+    orange.runLoopMax(max);
     delay(SECOND);
 
     Light yellow = Light(32);
     delay(SECOND);
     yellow.setup();
     delay(SECOND);
-    yellow.runLoop();
+    yellow.runLoopMax(max);
     delay(SECOND);
 
     Light green = Light(33);
     delay(SECOND);
     green.setup();
     delay(SECOND);
-    green.runLoop();
+    green.runLoopMax(max);
     delay(SECOND);
 
     Light blue = Light(25);
     delay(SECOND);
     blue.setup();
     delay(SECOND);
-    blue.runLoop();
+    blue.runLoopMax(max);
     delay(SECOND);
 
     Light purple = Light(26);
     delay(SECOND);
     purple.setup();
     delay(SECOND);
-    purple.runLoop();
+    purple.runLoopMax(max);
     delay(SECOND);
 
     Light ocean = Light(27);
     delay(SECOND);
     ocean.setup();
     delay(SECOND);
-    ocean.runLoop();
+    ocean.runLoopMax(max);
     delay(SECOND);
 }
