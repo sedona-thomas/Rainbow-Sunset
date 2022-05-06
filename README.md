@@ -105,7 +105,8 @@
 
 ### Run Device
 
-- 
+- Either plug in the ESP32 or plug an external battery to the ESP32
+- The program will automatically run
 
 ## More Information
 
