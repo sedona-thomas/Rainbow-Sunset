@@ -73,6 +73,16 @@
 - Solder together lights behind the same color of glass
 - Hot glue each wire along the back side of the solder to hide the wires
 
+##### Connect the Lights
+
+- Connect the lights from the red panel to GPIO pin 21
+- Connect the lights from the orange panel to GPIO pin 22
+- Connect the lights from the yellow panel to GPIO pin 32
+- Connect the lights from the green panel to GPIO pin 33
+- Connect the lights from the blue panel to GPIO pin 25
+- Connect the lights from the purple panel to GPIO pin 26
+- Connect the lights from the ocean panel to GPIO pin 27
+
 #### Connect Neopixel Ring
 
 - Attach the D1 pin of the neopoxel light ring to pin 13 of the ESP32
@@ -80,6 +90,14 @@
 - Connect the ground pin to an external battery ground (-) terminal
 
 #### Connect Sensors
+
+##### Connect the DHT22 Sensor
+
+- Connect the first pin to the 5V pin of the ESP32
+- Connect the third pin to GPIO pin 12
+- Connect the fourth pin to a ground pin of the ESP32
+
+##### Connect the Photoresistor
 
 - 
 
